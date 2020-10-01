@@ -92,12 +92,15 @@ function lookupUser(id) {
 
 function renderAdminView() {
     let ht = "";
+    let ctr = 0;
     for(var k in _zpAdminData) {
+        ctr += 1;
+        let commentId = "comment-" + ctr.toString()
         let d = JSON.parse(_zpAdminData[k])
         let ts = new Date(d.ts / 1000000);
         let txt = d.text;
         let uid = d.uid;
-        let item = `<div class="one-comment"><div>By <a href=\"#\" onClick=\"lookupUser('${uid}')\">${uid}</a> at ${ts.toLocaleTimeString()}</div><p><a href="#" onClick="deletePost('${k}')">Delete &times;</a>${txt}</p></div>`
+        let item = `<div class="one-comment" id="${commentId}"><div>By <a href=\"#\" onClick=\"lookupUser('${uid}')\">${uid}</a> at ${ts.toLocaleTimeString()}</div><p><a href="#" onClick="deletePost('${k}');$('#${commentId}').hide()">Delete &times;</a>${txt}</p></div>`
         ht += item
     }
     return ht
