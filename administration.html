@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- This includes Zetabase and injects the `Zb` variable into your environment. -->
+        <script src="https://zetabase.io/static/assets/js/zetabase-web-latest.js" charset="utf-8"></script>
+        <script src="https://zetabase.io/static/assets/js/comments.js"  charset="utf-8" ></script>
+        <script src="./comments-admin.js"  charset="utf-8" ></script>
+        <link rel="stylesheet" href="./default-styling.css">
+        <link rel="stylesheet" href="./admin-styling.css">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
+
+    </head>
+    <body>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="comments-admin" class="zp-main">
+                    <div class="zp-inputs">
+                        <p>
+                            <span class="zp-br">&nbsp;</span>
+                            <span class="zp-description">Administration</span>
+                        </p>
+                        <p class="zp-help-message">&nbsp;</p>
+                        <p><span class="zp-input-label">User handle</span></p>
+                        <input  type="text" id="handle-input" />
+                        <p><span class="zp-pass-label">Password</span></p>
+                        <input type="password" />
+                        <p><span class="zp-admin-site-label">Page ID</span></p>
+                        <input  type="text"  id="site-input"/>
+                    </div>
+                    <div class="zp-comments-links">
+                        <a class="zp-submit-link zp-form-link" href="#">submit</a>
+                        <!--
+                        <a class="zp-signup-link zp-form-link" href="#">signup</a>
+                        <a class="zp-login-link zp-form-link" href="#">login</a>
+                        <a class="zp-edit-profile-link zp-form-link" href="#">edit profile</a>
+                        -->
+                    </div>
+                    <div class="zp-author-info">
+                        <h4>Author info</h4>
+                        <p> </p>
+                    </div>
+                    <div class="zp-admin">
+
+                    </div>
+                </div>
+
+
+
+
+            </div> 
+        </div>
+    </div>
+
+    <script>
+        commentsAdmin('comments-admin')
+    </script>
+    </body>
+</html>

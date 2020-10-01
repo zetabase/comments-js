@@ -1,0 +1,203 @@
+div.zp-main {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4em; 
+    color: #555555;
+    margin-top: 40px;
+    border-top: 1px solid #cccccc;
+    padding-top: 18px;
+}
+
+div.zp-main > div {
+    padding-left: 12px;
+    margin-left: -12px;
+    padding-right: 12px;
+    margin-right: -12px;
+    margin-top: 0px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+
+div.zp-main textarea {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 105%;
+    border: 1px solid #cccccc;
+    border-radius: 4px; 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1); 
+    padding: 8px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 6px 0;
+    width: 100%;
+    height: 80px;
+}
+
+div.zp-main input {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 105%;
+    border: 1px solid #cccccc;
+    border-radius: 4px; 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1); 
+    padding: 8px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 6px 0;
+}
+
+span.zp-description {
+    font-size: 120%;
+    font-weight: bold;
+    color: #0293db;
+}
+
+span.zp-comment-ts {
+    color: #777777;
+    font-size: 90%;
+    /* display: block; */
+    margin-bottom: 8px;
+}
+
+div.zp-comments {
+    margin-top: 24px;
+}
+
+span.zp-br {
+    font-size: 95%;
+    padding-left: 40px;
+    float: right;
+}
+
+div.zp-comments li div {
+    border-bottom: 1px solid #cccccc;
+}
+
+span.zp-comment-handle {
+    font-weight: bold;
+    font-size: 105%;
+    color: #444444;
+}
+
+span.zp-comment-my-handle {
+    font-weight: bold;
+    font-size: 105%;
+    color: #0293db;
+}
+
+div.zp-comments ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+div.zp-comments li {
+    padding-bottom: 18px;
+    padding-top: 8px;
+    font-size: 100%;
+    /* border: 1px solid #cccccc; */
+}
+
+div.zp-comments-links {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+div.zp-comments-links a.zp-form-link:link, a.zp-form-link:visited {
+    background-color: #00a9fc;
+    color: white;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #00a9fc; 
+}
+  
+div.zp-comments-links  a.zp-form-link:hover, a.zp-form-link:active {
+    background-color: #0293db;
+    color: #e6f6ff;
+    border-radius: 4px;
+    border: 1px solid #00a9fc; 
+}  
+
+
+div.zp-comments-links a.zp-login-link:link, a.zp-login-link:visited {
+    background-color: white;
+    color: #666666;
+    border-radius: 4px;
+    border: 1px solid #666666; 
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    float: right;
+    margin-left: 4px;
+}
+  
+div.zp-comments-links  a.zp-login-link:hover, a.zp-login-link:active {
+    background-color: white;
+    color: #00a9fc;
+    border-radius: 4px;
+    border: 1px solid #00a9fc; 
+    float: right;
+}
+
+div.zp-comments-links a.zp-edit-profile-link {
+    float: right;
+}
+
+div.zp-comment-text a {
+    color: #0293db;
+}
+  
+div.zp-comment-text {
+    padding-top: 8px;
+    min-height: 70px;
+}
+
+span.zp-no-comments {
+    color: #0293db;
+    font-size: 105%;
+    font-weight: bold;
+}
+
+.zp-comment-tile { 
+    width: 300px; 
+    padding: 8px;
+}
+.zp-comment-tile--width2 { 
+    width: 500px; 
+    padding: 8px;
+}
+
+.zp-comment-tile div.zp-comment-text {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom: 1px solid #cccccc; 
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    padding: 8px; 
+}
+
+.zp-comment-tile div.zp-comment-header {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    padding: 8px; 
+}
+
+.edit-profile-active {
+    background-color: #eeeeee;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+}
+
+p.zp-help-message {
+    border: 1px solid #00a9fc;
+    background-color: #eeeeee;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 12px;
+    border-radius: 4px;
+    color: #0293db;
+}
