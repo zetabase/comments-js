@@ -1,2 +1,3 @@
-# comments-js
-The official repository for Comments.js.
+# [Comments.js](https://zetabase.io/comments-js)
+ 
+Create comment sections, user profiles, etc. on static sites (including GitHub Pages).
