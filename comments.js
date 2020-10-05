@@ -603,7 +603,7 @@ function commentsify(uid, signupToken, divId0, options) {
                 try {
                     console.log(`Auto logging in as ${handle} - ${uid} (${tok})`)
                     Zb.connectSubJwt(uid, subUid, tok, function(cli, err) {
-                        console.log("csj - access", cli.jwtToken)
+                        // console.log("csj - access", cli.jwtToken)
                         if(err) {
                             console.log(`err 0 - `, err)
                             $(descSel).text("Login failed. Please check handle and password. (3) - " + err.toString())
