@@ -113,6 +113,7 @@ function mdToHtml(md) {
 }
 
 var _zpClient = undefined;
+var _zpDidPublicLogin = false;
 var _zpUserId = undefined;
 var _zpUserHandle = undefined;
 var _zpMode = undefined;
@@ -146,6 +147,7 @@ function _zpDefaultPageKey() {
 
 function _zpSetMode(divId0, newMode, options) {
     // console.log("changing mode to ", newMode)
+    let oldMode = _zpMode;
     let doLogin3pa = __is3pa(options)
     _zpMode = newMode;
     let divId = stripId(divId0);
@@ -239,7 +241,9 @@ function _zpSetMode(divId0, newMode, options) {
 
         $(editProfileSel + " textarea").val("")
         $(editProfileSel + " textarea").focus();
-        scrollTo(descSel)
+        if(!!oldMode) {
+            scrollTo(descSel)
+        }
         $(loginSel).show()
         $(loginSel).text("logout")
         $(signupSel).hide()
@@ -651,6 +655,7 @@ function commentsify(uid, signupToken, divId0, options) {
 
     if((!autoLogin)) {
         console.log("doing public login: ", PUBLIC_SUBUSER_HANDLE, PUBLIC_SUBUSER_PASSWORD)
+        _zpDidPublicLogin = true;
         Zb.connectSub(uid, PUBLIC_SUBUSER_HANDLE, PUBLIC_SUBUSER_PASSWORD, function(cli,err){
             if(err){
                 $(descSel).text("Public login failed. Please refer to setup instructions to fix this.")
@@ -667,7 +672,9 @@ function commentsify(uid, signupToken, divId0, options) {
             if((!!_zpClient) && (!!_zpClient.jwtRefreshToken)) {
                 Zb.refreshJwtToken(_zpClient, function(r){
                     console.log("Refresh result: ", r)
-                    _zpPersistCreds(_zpClient.userId, _zpUserHandle, _zpClient.jwtRefreshToken)
+                    if(!_zpDidPublicLogin) {
+                        _zpPersistCreds(_zpClient.userId, _zpUserHandle, _zpClient.jwtRefreshToken)
+                    }
                 })
             }
         } catch(e){
